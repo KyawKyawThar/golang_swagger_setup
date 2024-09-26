@@ -1,0 +1,32 @@
+To set up Swagger in a Go project using the Gin web framework and
+ handle a simple HTTP request, you can follow these steps:
+
+go get -u github.com/gin-gonic/gin
+go get -u github.com/swaggo/gin-swagger
+go get -u github.com/swaggo/files
+go get -u github.com/swaggo/swag/cmd/swag
+
+
+Use swag init to generate Swagger documentation.
+Run this command in the root of your project:
+swag init
+
+4. Write Code with Swagger Annotations
+
+5. Add Swagger Annotations
+In the code above, the comments just above the SimpleRequest
+function are Swagger annotations that define how the API documentation
+should be generated. For instance:
+
+@Summary: A brief description of the endpoint.
+@Description: A more detailed explanation.
+@Tags: Categories for the API endpoints.
+@Success: What a successful response looks like.
+@Router: Defines the path and method (GET, POST, etc.).
+
+swag init
+go run main.go
+http://localhost:8080/swagger/index.html
+
+
+

@@ -1,0 +1,24 @@
+basePath: /api/v1
+host: localhost:8080
+info:
+  contact: {}
+  description: This is a simple API to demonstrate Swagger with Gin in Go.
+  title: Simple Gin HTTP Request API
+  version: "1.0"
+paths:
+  /simple:
+    get:
+      consumes:
+      - application/json
+      description: get a simple HTTP response
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+      summary: Show a simple request example
+      tags:
+      - example
+swagger: "2.0"
